@@ -1,0 +1,1804 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BelleFacite — Locação de Tecnologias Estéticas em João Pessoa</title>
+<meta name="description" content="Locação de equipamentos estéticos com Registro ANVISA em João Pessoa – PB: HIFU 4D, criolipólise, microagulhamento e mais, com treinamento e suporte inclusos.">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="BelleFacite Equipamentos Estéticos">
+<link rel="canonical" href="https://bellefacite.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="BelleFacite">
+<meta property="og:title" content="BelleFacite — Tecnologias estéticas de ponta sem investimento de seis dígitos">
+<meta property="og:description" content="Locação flexível de equipamentos ANVISA com treinamento completo e suporte total. João Pessoa – PB.">
+<meta property="og:url" content="https://bellefacite.com.br/">
+<meta property="og:image" content="https://bellefacite.com.br/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   BelleFacite — Premium
+   Design tokens
+   ============================================================ */
+:root{
+  color-scheme: light;
+
+  --paper:#ffffff;
+  --mist:#f8f7f9;
+  --mist-2:#f2f0f3;
+  --ink:#12111a;
+  --ink-2:#3d3b47;
+  --muted:#6b7280;
+  --muted-2:#9a98a4;
+  --line:#e9e7ec;
+  --line-2:#dedbe3;
+
+  --pink:#ed3d6c;
+  --pink-600:#d22a58;
+  --pink-050:#fff2f6;
+  --pink-tint:rgba(237,61,108,.10);
+
+  --shadow-xs:0 1px 2px rgba(18,17,26,.04);
+  --shadow-sm:0 4px 6px rgba(18,17,26,.07);
+  --shadow-md:0 12px 28px -8px rgba(18,17,26,.12);
+  --shadow-lg:0 32px 64px -24px rgba(18,17,26,.22);
+
+  --r-sm:10px;
+  --r:12px;
+  --r-lg:20px;
+  --r-xl:28px;
+
+  --pad:clamp(20px,5vw,40px);
+  --maxw:1200px;
+  --header-h:70px;
+
+  --sp-section:clamp(64px,9vw,120px);
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px)}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+@media (min-width:1025px){body{font-size:17px}}
+
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+ul{margin:0;padding:0;list-style:none}
+figure,dl,dd,blockquote{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.12;letter-spacing:-.03em}
+p{margin:0}
+table{border-collapse:collapse;width:100%}
+
+::selection{background:var(--pink);color:#fff}
+
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--ink);color:#fff;padding:12px 18px;border-radius:0 0 var(--r) 0}
+.skip:focus{left:0}
+
+/* ---------- primitives ---------- */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.section{padding-block:var(--sp-section)}
+.section--mist{background:var(--mist)}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--pink);margin-bottom:20px;
+}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--pink);opacity:.5}
+
+.h-display{font-size:clamp(32px,6.2vw,56px)}
+.h-section{font-size:clamp(28px,4.6vw,44px)}
+.h-sub{font-size:clamp(19px,2.2vw,23px)}
+.serif{font-family:'Instrument Serif','Iowan Old Style',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+
+.lead{font-size:clamp(16px,1.7vw,18.5px);line-height:1.7;color:var(--ink-2)}
+.muted{color:var(--muted)}
+
+.section-head{max-width:640px;margin-bottom:clamp(40px,5vw,64px)}
+.section-head p{margin-top:18px}
+.section-head--center{margin-inline:auto;text-align:center}
+.section-head--center .eyebrow::after{content:"";width:24px;height:1px;background:var(--pink);opacity:.5}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 26px;border-radius:100px;
+  font-size:15px;font-weight:600;letter-spacing:-.01em;
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease),background-color .22s,color .22s,border-color .22s;
+  white-space:nowrap;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn--pink{background:var(--pink);color:#fff;box-shadow:0 8px 20px -8px rgba(237,61,108,.6)}
+.btn--pink:hover{background:var(--pink-600);transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(237,61,108,.66)}
+.btn--ink{background:var(--ink);color:#fff}
+.btn--ink:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn--ghost{border:1px solid var(--line-2);color:var(--ink);background:var(--paper)}
+.btn--ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn--sm{padding:11px 19px;font-size:14px}
+.btn--block{width:100%}
+.btn:active{transform:translateY(0)}
+
+.link-arrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14.5px;font-weight:600;color:var(--ink);position:relative;padding-bottom:3px;
+}
+.link-arrow::after{
+  content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--pink);
+  transition:width .34s var(--ease);
+}
+.link-arrow svg{width:15px;height:15px;transition:transform .34s var(--ease)}
+.link-arrow:hover::after,.card:hover .link-arrow::after{width:100%}
+.link-arrow:hover svg,.card:hover .link-arrow svg{transform:translateX(4px)}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:80;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,box-shadow .3s,background-color .3s;
+}
+.site-header.is-stuck{border-bottom-color:var(--line);box-shadow:0 1px 0 rgba(18,17,26,.02)}
+.header-inner{
+  height:var(--header-h);
+  display:flex;align-items:center;gap:24px;
+  width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);
+}
+.brand{display:flex;align-items:center;gap:11px;flex:none;margin-right:auto}
+.brand img{height:38px;width:auto}
+.brand span{display:none}
+@media (min-width:480px){
+  .brand span{display:block;font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+  .brand small{display:block;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+}
+
+.nav{display:none}
+@media (min-width:1000px){
+  .nav{display:flex;align-items:center;gap:34px}
+  .nav a{font-size:14.5px;font-weight:500;color:var(--ink-2);position:relative;padding-block:6px;transition:color .2s}
+  .nav a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--pink);transition:width .3s var(--ease)}
+  .nav a:hover{color:var(--ink)}
+  .nav a:hover::after{width:100%}
+}
+.header-cta{display:none}
+@media (min-width:700px){.header-cta{display:inline-flex}}
+
+.nav-toggle{
+  display:inline-flex;flex-direction:column;justify-content:center;gap:5px;
+  width:42px;height:42px;align-items:center;border-radius:50%;border:1px solid var(--line);
+}
+@media (min-width:1000px){.nav-toggle{display:none}}
+.nav-toggle i{display:block;width:17px;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
+.nav-toggle[aria-expanded="true"] i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] i:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mobile-nav{
+  position:fixed;inset:var(--header-h) 0 auto 0;z-index:79;
+  background:var(--paper);border-bottom:1px solid var(--line);
+  padding:12px var(--pad) 28px;
+  transform:translateY(-104%);transition:transform .42s var(--ease);
+  box-shadow:var(--shadow-md);
+}
+.mobile-nav.is-open{transform:translateY(0)}
+.mobile-nav a{display:block;padding:16px 2px;font-size:18px;font-weight:600;letter-spacing:-.02em;border-bottom:1px solid var(--line)}
+.mobile-nav .btn{margin-top:22px}
+@media (min-width:1000px){.mobile-nav{display:none}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;background:var(--paper);overflow:hidden}
+.hero-grid{
+  display:grid;gap:clamp(32px,5vw,48px);
+  width:100%;max-width:var(--maxw);margin-inline:auto;padding:clamp(48px,7vw,88px) var(--pad) clamp(40px,6vw,72px);
+  align-items:center;
+}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:1.02fr .98fr;gap:clamp(40px,4vw,64px);min-height:min(78vh,760px)}
+}
+.hero-copy{max-width:600px;position:relative;z-index:2}
+.hero h1{font-size:clamp(33px,6vw,57px);letter-spacing:-.035em;line-height:1.06}
+.hero h1 .serif{color:var(--pink)}
+.hero-sub{margin-top:24px;max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+
+.badge-anvisa{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 16px 7px 8px;border-radius:100px;
+  background:var(--pink-050);border:1px solid rgba(237,61,108,.18);
+  font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-600);
+  margin-bottom:26px;
+}
+.badge-anvisa b{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;background:var(--pink);color:#fff;font-size:11px;letter-spacing:0;
+}
+
+.hero-trust{
+  display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line);
+}
+.hero-trust li{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--ink-2)}
+.hero-trust svg{width:15px;height:15px;color:var(--pink);flex:none}
+
+.hero-visual{position:relative;border-radius:var(--r-xl);overflow:hidden;background:var(--mist-2)}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(100deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 42%),
+             linear-gradient(0deg,rgba(18,17,26,.07),rgba(18,17,26,0) 45%);
+}
+.hero-visual img{
+  width:100%;height:clamp(260px,46vw,520px);object-fit:cover;object-position:66% center;
+  transform:translateZ(0);
+}
+@media (min-width:900px){
+  /* sangra até a borda direita da viewport */
+  .hero-visual{margin-right:calc(-1 * (var(--pad) + max(0px,(100vw - var(--maxw)) / 2)));border-radius:var(--r-xl) 0 0 var(--r-xl)}
+  .hero-visual img{height:min(72vh,640px)}
+}
+.hero-glow{
+  position:absolute;z-index:0;pointer-events:none;
+  width:min(60vw,620px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(237,61,108,.09),rgba(237,61,108,0) 68%);
+  top:-16%;left:-14%;
+}
+
+/* ============================================================
+   PROBLEMA → SOLUÇÃO
+   ============================================================ */
+.grid-3{display:grid;gap:24px}
+@media (min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+.pcard{
+  position:relative;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:clamp(26px,3vw,34px);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s;
+  overflow:hidden;
+}
+.pcard::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pink),rgba(237,61,108,.25));
+  transform:scaleX(var(--sx,.22));transform-origin:left;transition:transform .5s var(--ease);
+}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line-2)}
+.pcard:hover::before{--sx:1}
+.pcard--solution{background:var(--ink);border-color:var(--ink);color:#fff}
+.pcard--solution .pcard-step,.pcard--solution p{color:rgba(255,255,255,.68)}
+.pcard--solution::before{--sx:1;background:linear-gradient(90deg,var(--pink),rgba(237,61,108,.35))}
+.pcard-icon{
+  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:var(--pink-050);color:var(--pink);margin-bottom:22px;font-size:23px;line-height:1;
+}
+.pcard-icon svg{width:24px;height:24px}
+.pcard--solution .pcard-icon{background:rgba(255,255,255,.09);color:#ff85aa}
+.pcard-step{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin-bottom:10px}
+.pcard h3{font-size:20.5px;margin-bottom:12px;letter-spacing:-.025em}
+.pcard p{font-size:15.3px;line-height:1.68;color:var(--muted)}
+
+/* ============================================================
+   BENEFÍCIOS
+   ============================================================ */
+.benefits{display:grid;gap:clamp(32px,4vw,52px) clamp(28px,4vw,48px);grid-template-columns:repeat(2,1fr)}
+@media (min-width:900px){.benefits{grid-template-columns:repeat(3,1fr)}}
+.benefit-ico{
+  width:48px;height:48px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;
+  border-radius:13px;background:var(--pink-050);color:var(--pink);
+}
+.benefit-ico svg{width:23px;height:23px}
+.benefit h3{font-size:17.5px;margin-bottom:9px;letter-spacing:-.022em}
+.benefit p{font-size:14.8px;line-height:1.68;color:var(--muted)}
+
+/* ============================================================
+   SOBRE + STATS
+   ============================================================ */
+.about{display:grid;gap:clamp(36px,5vw,64px);align-items:center}
+@media (min-width:900px){.about{grid-template-columns:.86fr 1.14fr}}
+.about-media{position:relative;border-radius:var(--r-xl);overflow:hidden;background:var(--mist-2)}
+.about-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about-media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(18,17,26,.05);border-radius:inherit;pointer-events:none}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+@media (min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--paper);padding:24px 18px;text-align:center}
+.stat b{display:block;font-size:clamp(28px,3.6vw,38px);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.stat b .serif{color:var(--pink)}
+.stat span{display:block;margin-top:9px;font-size:10.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted-2);line-height:1.45}
+
+/* ============================================================
+   DEPOIMENTOS
+   ============================================================ */
+.reviews{display:grid;gap:20px}
+@media (min-width:640px){.reviews{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.reviews{grid-template-columns:repeat(4,1fr)}}
+.review{
+  background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--pink);
+  border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column;gap:18px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.review:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.stars{display:flex;gap:2px;color:#f5a623}
+.stars svg{width:15px;height:15px}
+.review blockquote{margin:0;font-size:15.3px;line-height:1.68;color:var(--ink-2);flex:1}
+.review-who{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.avatar{
+  width:42px;height:42px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  background:var(--pink-050);color:var(--pink-600);font-size:13px;font-weight:700;letter-spacing:.02em;
+}
+.review-who b{display:block;font-size:14.5px;font-weight:600;letter-spacing:-.015em}
+.review-who span{display:block;font-size:12.3px;color:var(--muted-2)}
+.reviews-note{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:32px;font-size:13px;color:var(--muted)}
+.reviews-note svg{width:15px;height:15px;color:#34a853}
+
+/* ============================================================
+   PORTFÓLIO
+   ============================================================ */
+.equip-grid{display:grid;gap:22px}
+@media (min-width:660px){.equip-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1060px){.equip-grid{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  position:relative;display:flex;flex-direction:column;text-align:left;width:100%;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  transition:transform .42s var(--ease),box-shadow .42s var(--ease),border-color .3s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--line-2)}
+.card-media{position:relative;overflow:hidden;background:var(--mist-2)}
+.card-media img{
+  width:100%;height:320px;object-fit:cover;object-position:center;
+
+  transition:transform .8s var(--ease);
+}
+.card:hover .card-media img{transform:scale(1.05)}
+.card-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(255,255,255,.93);backdrop-filter:blur(6px);
+  padding:6px 12px;border-radius:100px;
+  font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);
+}
+.card-anvisa{
+  position:absolute;top:14px;right:14px;z-index:2;
+  background:rgba(18,17,26,.72);backdrop-filter:blur(6px);color:#fff;
+  padding:6px 11px;border-radius:100px;font-size:10px;font-weight:600;letter-spacing:.1em;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.card-anvisa svg{width:11px;height:11px}
+.card-body{padding:24px 22px 26px;display:flex;flex-direction:column;gap:11px;flex:1}
+.card-body h3{font-size:21px;letter-spacing:-.028em}
+.card-body p{font-size:14.3px;line-height:1.62;color:var(--muted);flex:1}
+.card-price{font-size:13px;color:var(--ink-2);font-weight:500}
+.card-price b{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-grid{display:grid;gap:0 clamp(32px,5vw,64px)}
+@media (min-width:900px){.faq-grid{grid-template-columns:repeat(2,1fr);align-items:start}}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  display:flex;align-items:flex-start;gap:18px;width:100%;text-align:left;
+  padding:22px 0;font-size:16.2px;font-weight:600;letter-spacing:-.02em;line-height:1.45;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--pink-600)}
+.faq-q i{
+  flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line-2);
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+  transition:transform .38s var(--ease),background-color .25s,border-color .25s,color .25s;
+}
+.faq-q i svg{width:11px;height:11px}
+.faq-item.is-open .faq-q i{transform:rotate(180deg);background:var(--pink);border-color:var(--pink);color:#fff}
+/* abre/fecha por grid 0fr→1fr: anima sem depender de medir altura no JS */
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s var(--ease)}
+.faq-item.is-open .faq-a{grid-template-rows:1fr}
+.faq-a-inner{overflow:hidden;min-height:0}
+.faq-a-inner p{padding:0 44px 26px 0;font-size:15.2px;line-height:1.72;color:var(--muted)}
+@media (min-width:900px){.faq-a-inner p{padding-right:56px}}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+.cta{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:var(--r-xl);padding:clamp(48px,7vw,88px) var(--pad);text-align:center}
+.cta::before{
+  content:"";position:absolute;width:min(80vw,780px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(237,61,108,.30),rgba(237,61,108,0) 68%);
+  top:-38%;left:50%;transform:translateX(-50%);pointer-events:none;
+}
+.cta-inner{position:relative;z-index:1;max-width:620px;margin-inline:auto}
+.cta h2{font-size:clamp(29px,4.6vw,46px);letter-spacing:-.035em}
+.cta h2 .serif{color:#ff97b6}
+.cta p{margin-top:20px;color:rgba(255,255,255,.72);font-size:clamp(15.5px,1.7vw,18px);line-height:1.68}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
+.cta .btn--ghost{background:transparent;border-color:rgba(255,255,255,.26);color:#fff}
+.cta .btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.cta-contacts{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;margin-top:44px;padding-top:34px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.cta-contacts a,.cta-contacts span{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:100px;
+  background:rgba(255,255,255,.06);font-size:13.8px;font-weight:500;color:rgba(255,255,255,.88);
+  transition:background-color .25s,transform .25s var(--ease);
+}
+.cta-contacts a:hover{background:rgba(255,255,255,.13);transform:translateY(-2px)}
+.cta-contacts svg{width:15px;height:15px;color:var(--pink);flex:none}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.62);padding-block:clamp(48px,6vw,72px) 0;margin-top:clamp(64px,9vw,120px)}
+.footer-grid{display:grid;gap:40px}
+@media (min-width:600px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}}
+.footer-brand img{height:44px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
+.footer-brand p{margin-top:20px;font-size:14.5px;line-height:1.7;max-width:330px}
+.footer-social{display:flex;gap:10px;margin-top:24px}
+.footer-social a{
+  width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.07);color:#fff;transition:background-color .25s,transform .25s var(--ease);
+}
+.footer-social a:hover{background:var(--pink);transform:translateY(-3px)}
+.footer-social svg{width:17px;height:17px}
+.site-footer h4{color:#fff;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px}
+.site-footer li{margin-bottom:12px}
+.site-footer a{font-size:14.5px;transition:color .2s}
+.site-footer a:hover{color:#fff}
+.footer-contact li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;line-height:1.6}
+.footer-contact svg{width:15px;height:15px;margin-top:4px;color:var(--pink);flex:none}
+.footer-bottom{
+  margin-top:clamp(44px,6vw,64px);padding-block:26px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center;font-size:12.8px;
+}
+
+/* ============================================================
+   WHATSAPP FLUTUANTE
+   ============================================================ */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  display:inline-flex;align-items:center;gap:10px;
+  height:56px;padding:0 20px;border-radius:100px;
+  background:#25D366;color:#fff;font-size:14.5px;font-weight:600;
+  box-shadow:0 12px 28px -8px rgba(37,211,102,.6);
+  transform:translateY(120px);opacity:0;pointer-events:none;
+  transition:transform .5s var(--ease),opacity .4s,box-shadow .3s;
+}
+.wa-float.is-visible{transform:translateY(0);opacity:1;pointer-events:auto}
+.wa-float:hover{box-shadow:0 16px 34px -10px rgba(37,211,102,.7)}
+.wa-float svg{width:24px;height:24px;flex:none}
+.wa-float span{display:none}
+@media (min-width:560px){.wa-float span{display:block}}
+@media (max-width:559px){.wa-float{padding:0;width:56px;justify-content:center}}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+.modal-scrim{
+  position:fixed;inset:0;z-index:100;background:rgba(18,17,26,.55);
+  opacity:0;pointer-events:none;visibility:hidden;
+  transition:opacity .32s,visibility 0s linear .32s;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+/* o blur só é ativado quando o modal abre — evita uma camada composta
+   de tela cheia sendo recalculada a cada frame com o modal fechado */
+.modal-scrim.is-open{
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  visibility:visible;transition:opacity .32s,visibility 0s;
+}
+@media (min-width:760px){.modal-scrim{align-items:center;padding:32px}}
+.modal-scrim.is-open{opacity:1;pointer-events:auto}
+body.is-locked{overflow:hidden}
+
+.modal{
+  position:relative;background:var(--paper);width:100%;max-width:940px;
+  max-height:94vh;overflow-y:auto;overscroll-behavior:contain;
+  border-radius:var(--r-xl) var(--r-xl) 0 0;
+  transform:translateY(40px);opacity:0;transition:transform .42s var(--ease),opacity .32s;
+  -webkit-overflow-scrolling:touch;
+}
+@media (min-width:760px){.modal{border-radius:var(--r-xl);max-height:90vh}}
+.modal-scrim.is-open .modal{transform:translateY(0);opacity:1}
+.modal[hidden]{display:none}
+
+.modal-close{
+  position:sticky;top:14px;float:right;margin:14px 14px 0 0;z-index:6;
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);
+  transition:background-color .22s,transform .22s var(--ease);
+}
+.modal-close:hover{background:var(--ink);color:#fff;transform:rotate(90deg)}
+.modal-close svg{width:15px;height:15px}
+
+.modal-head{padding:clamp(26px,4vw,40px) clamp(22px,4vw,40px) 0}
+.modal-head .eyebrow{margin-bottom:12px}
+.modal-head h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.034em}
+.modal-reg{
+  display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+  padding:6px 13px;border-radius:100px;background:var(--mist);border:1px solid var(--line);
+  font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--ink-2);
+}
+.modal-reg svg{width:12px;height:12px;color:var(--pink)}
+
+/* galeria */
+.gallery{margin:clamp(22px,3vw,32px) 0 0;position:relative;background:var(--mist);border-block:1px solid var(--line)}
+.gallery-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.gallery-track::-webkit-scrollbar{display:none}
+.gslide{flex:0 0 100%;scroll-snap-align:center;position:relative}
+.gslide img{width:100%;height:clamp(240px,42vw,420px);object-fit:cover;object-position:center;background:var(--mist-2)}
+.gslide figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;
+  background:linear-gradient(0deg,rgba(18,17,26,.8),rgba(18,17,26,0));
+  color:#fff;font-size:13.4px;line-height:1.5;font-weight:500;
+}
+.gnav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);box-shadow:var(--shadow-sm);
+  display:flex;align-items:center;justify-content:center;color:var(--ink);
+  transition:background-color .22s,transform .22s var(--ease),opacity .22s;
+}
+.gnav:hover{background:var(--ink);color:#fff}
+.gnav[disabled]{opacity:.3;pointer-events:none}
+.gnav--prev{left:14px}
+.gnav--next{right:14px}
+.gnav svg{width:15px;height:15px}
+.gdots{display:flex;justify-content:center;gap:7px;padding:14px 0 16px}
+.gdots button{width:7px;height:7px;border-radius:50%;background:var(--line-2);transition:width .3s var(--ease),background-color .3s}
+.gdots button[aria-current="true"]{width:22px;border-radius:100px;background:var(--pink)}
+
+.modal-body{padding:clamp(26px,4vw,40px) clamp(22px,4vw,40px) clamp(32px,4vw,44px);display:grid;gap:clamp(30px,4vw,42px)}
+.modal-body p.lead{font-size:15.8px;line-height:1.75;color:var(--ink-2)}
+.block-title{
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);
+  margin-bottom:18px;display:flex;align-items:center;gap:12px;
+}
+.block-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+@media (min-width:660px){.specs{grid-template-columns:repeat(3,1fr)}}
+.specs div{background:var(--paper);padding:16px 18px}
+.specs dt{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
+.specs dd{margin:0;font-size:14.6px;font-weight:600;letter-spacing:-.018em;color:var(--ink);line-height:1.4}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags li{
+  padding:8px 15px;border-radius:100px;background:var(--pink-050);
+  border:1px solid rgba(237,61,108,.16);color:var(--pink-600);
+  font-size:12.8px;font-weight:600;letter-spacing:-.01em;
+}
+
+.gains{display:grid;gap:16px}
+@media (min-width:640px){.gains{grid-template-columns:repeat(2,1fr)}}
+.gain{background:var(--mist);border-radius:var(--r);padding:22px;border:1px solid transparent;transition:border-color .3s,background-color .3s}
+.gain:hover{background:var(--paper);border-color:var(--line)}
+.gain b{display:flex;align-items:center;gap:10px;font-size:15.4px;font-weight:600;letter-spacing:-.022em;margin-bottom:9px}
+.gain b em{font-style:normal;font-size:19px;line-height:1}
+.gain p{font-size:14.2px;line-height:1.65;color:var(--muted)}
+
+.price-table{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.price-table th{
+  text-align:left;padding:13px 20px;background:var(--mist);
+  font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);
+  border-bottom:1px solid var(--line);
+}
+.price-table th:last-child,.price-table td:last-child{text-align:right}
+.price-table td{padding:15px 20px;font-size:15px;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.price-table tr:last-child td{border-bottom:0}
+.price-table td:last-child{font-weight:700;color:var(--ink);letter-spacing:-.02em;white-space:nowrap}
+.price-table tr.is-extra td{background:var(--mist);font-size:13.8px;color:var(--muted)}
+.price-table tr.is-extra td:last-child{font-size:14.2px;font-weight:600;color:var(--ink-2)}
+.price-note{margin-top:12px;font-size:12.6px;color:var(--muted-2);line-height:1.6}
+
+.modal-pitch{
+  background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:clamp(26px,3.4vw,36px);
+  position:relative;overflow:hidden;
+}
+.modal-pitch::before{
+  content:"";position:absolute;width:420px;aspect-ratio:1;border-radius:50%;right:-140px;top:-180px;
+  background:radial-gradient(circle,rgba(237,61,108,.26),rgba(237,61,108,0) 70%);
+}
+.modal-pitch p{position:relative;font-size:15.6px;line-height:1.72;color:rgba(255,255,255,.82)}
+.modal-actions{position:relative;display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+.modal-pitch .btn--ghost{background:transparent;border-color:rgba(255,255,255,.26);color:#fff}
+.modal-pitch .btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+
+/* ============================================================
+   ANIMAÇÕES AO SCROLL
+   ============================================================ */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .78s var(--ease),transform .78s var(--ease)}
+[data-reveal].is-in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .hero-visual img{transform:none!important}
+}
+</style>
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.faq-a{grid-template-rows:1fr!important}</style></noscript>
+</head>
+
+<body id="top">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="BelleFacite — início">
+      <img src="assets/img/logo.png" alt="BelleFacite Equipamentos Estéticos" width="120" height="100">
+      <span>BelleFacite<small>Equipamentos Estéticos</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="btn btn--pink btn--sm header-cta" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20dos%20equipamentos%20BelleFacite." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.33 9.33 0 0 1 2.75 6.65c0 5.18-4.22 9.41-9.41 9.41M20.4 3.58A11.3 11.3 0 0 0 12.04.2C5.8.2.73 5.27.73 11.5c0 1.99.52 3.94 1.51 5.65L.64 23l5.99-1.57a11.27 11.27 0 0 0 5.4 1.38h.01c6.23 0 11.3-5.07 11.31-11.3 0-3.02-1.18-5.86-3.31-8"/></svg>
+      WhatsApp
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile">
+  <a href="#tecnologias">Tecnologias</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#avaliacoes">Avaliações</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contato">Contato</a>
+  <a class="btn btn--pink btn--block" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20dos%20equipamentos%20BelleFacite." target="_blank" rel="noopener">Falar no WhatsApp</a>
+</nav>
+
+<main id="conteudo">
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="badge-anvisa" data-reveal><b>5</b> Tecnologias com registro ANVISA</p>
+
+      <h1 data-reveal data-delay="80">
+        Tecnologias estéticas de última geração <span class="serif">sem investimento de seis dígitos</span>
+      </h1>
+
+      <p class="lead hero-sub" data-reveal data-delay="160">
+        Locação flexível de equipamentos com Registro ANVISA, treinamento completo e suporte durante todo o período.
+        Você cobre a locação na primeira sessão. Zero risco, máximo retorno.
+      </p>
+
+      <div class="hero-actions" data-reveal data-delay="240">
+        <a class="btn btn--pink" href="#tecnologias">
+          Explorar tecnologias
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20dos%20equipamentos%20BelleFacite." target="_blank" rel="noopener">
+          Ver disponibilidade
+        </a>
+      </div>
+
+      <ul class="hero-trust" data-reveal data-delay="320">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Treinamento incluso</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suporte total</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega no seu consultório</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" data-reveal data-delay="140">
+      <img id="heroImg" src="assets/img/hero.jpg" alt="Equipamentos estéticos BelleFacite: Axcel Criopad, Axcel Microneedle, Lipocavity 40, Herus HIFU 4D e Stim Care HTM" width="1920" height="1107" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PROBLEMA → SOLUÇÃO ══════════════════ -->
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">O cenário real das clínicas</p>
+      <h2 class="h-section">A demanda existe. <span class="serif">O investimento é que trava.</span></h2>
+      <p class="lead muted">Antes de falar de equipamento, vale olhar para a conta que toda clínica precisa fechar.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="pcard" data-reveal>
+        <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12.5" rx="2.5"/><circle cx="12" cy="12.2" r="2.6"/><path d="M6 10v4.5M18 10v4.5"/></svg></div>
+        <p class="pcard-step">01 · O problema</p>
+        <h3>Investimento de seis dígitos</h3>
+        <p>Equipamentos estéticos de última geração custam entre R$ 50.000 e R$ 500.000. Investimento altíssimo, tempo de retorno longo, risco elevado — a maioria das clínicas simplesmente não consegue justificar essa compra.</p>
+      </article>
+
+      <article class="pcard" data-reveal data-delay="120">
+        <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5h18"/><path d="M6 20.5v-6M11 20.5V8M16 20.5v-9"/><path d="M20 6.5 15 11l-3-2.5L7.5 12"/></svg></div>
+        <p class="pcard-step">02 · A realidade</p>
+        <h3>Demanda alta, risco maior ainda</h3>
+        <p>Seus pacientes querem acesso a tecnologias premium. Mas comprar sem testar, ficar com tecnologia desatualizada em três anos e depender de assistência técnica lenta são riscos que pesam mais que a oportunidade.</p>
+      </article>
+
+      <article class="pcard pcard--solution" data-reveal data-delay="240">
+        <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 13.9 8 19.5 10 13.9 12 12 17.5 10.1 12 4.5 10 10.1 8 12 2.5Z"/><path d="M18.5 16.5 19.3 18.7 21.5 19.5 19.3 20.3 18.5 22.5 17.7 20.3 15.5 19.5 17.7 18.7 18.5 16.5Z"/></svg></div>
+        <p class="pcard-step">03 · A solução BelleFacite</p>
+        <h3>Aluguel flexível com risco zero</h3>
+        <p>Teste antes de comprar. Pague por diária, 3 dias consecutivos ou semana inteira. Receba treinamento personalizado, tenha suporte técnico em tempo real e cubra a locação já na primeira sessão.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ BENEFÍCIOS ══════════════════ -->
+<section class="section" id="diferenciais">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Por que a BelleFacite</p>
+      <h2 class="h-section">O que você ganha <span class="serif">além do equipamento</span></h2>
+      <p class="lead muted">Não entregamos uma máquina na porta. Entregamos a operação inteira pronta para faturar.</p>
+    </div>
+
+    <div class="benefits">
+      <article class="benefit" data-reveal>
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
+        <h3>Retorno no 1º dia</h3>
+        <p>Cubra a locação com as primeiras sessões. Gere receita desde a primeira hora de uso — zero risco, lucro imediato.</p>
+      </article>
+
+      <article class="benefit" data-reveal data-delay="100">
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+        <h3>Treinamento incluso</h3>
+        <p>Capacitação completa com protocolos clínicos validados antes de cada locação. Você opera com segurança mesmo sem experiência prévia — sem custo adicional.</p>
+      </article>
+
+      <article class="benefit" data-reveal data-delay="200">
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5v5c0 5 3.4 8.9 8 9.5 4.6-.6 8-4.5 8-9.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Suporte técnico em tempo real</h3>
+        <p>Equipe disponível durante toda a locação para dúvidas de protocolo, parâmetros e operação. Você nunca fica sozinha com o paciente na sala.</p>
+      </article>
+
+      <article class="benefit" data-reveal data-delay="60">
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2.5 2.5L16 9"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Equipamentos com Registro ANVISA</h3>
+        <p>Trabalhamos exclusivamente com tecnologias certificadas. Segurança clínica e respaldo legal garantidos para o seu atendimento.</p>
+      </article>
+
+      <article class="benefit" data-reveal data-delay="160">
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg></div>
+        <h3>Protocolos combinados</h3>
+        <p>Combinações inteligentes entre tecnologias para resultados clínicos superiores — e tickets médios significativamente maiores por atendimento.</p>
+      </article>
+
+      <article class="benefit" data-reveal data-delay="260">
+        <div class="benefit-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3.5V17h-7"/><circle cx="7" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg></div>
+        <h3>Entrega, retirada e locação flexível</h3>
+        <p>Diária, pacote de 3 dias ou semana inteira. Entregamos pronto para uso no seu consultório e retiramos ao final — sem deslocamento, sem perda de tempo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SOBRE + STATS ══════════════════ -->
+<section class="section section--mist" id="sobre">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-media" data-reveal>
+        <img src="assets/img/versatilidade.jpg" alt="Manípulos e aplicadores das tecnologias BelleFacite" width="900" height="1125" loading="lazy" decoding="async">
+      </div>
+
+      <div>
+        <div class="section-head" style="margin-bottom:0" data-reveal data-delay="100">
+          <p class="eyebrow">Sobre a BelleFacite</p>
+          <h2 class="h-section">Tecnologia que transforma clínicas <span class="serif">em referência</span></h2>
+          <p class="lead">
+            Democratizamos as tecnologias estéticas mais procuradas do mercado. Sua clínica oferece tratamentos premium
+            sem comprometer capital com a compra: <b>nós entregamos, treinamos, damos suporte e retiramos</b>.
+            Locação por diária, 3 dias consecutivos ou semana, com entrega no seu consultório em João Pessoa – PB
+            e treinamento personalizado antes de cada uso.
+          </p>
+        </div>
+
+        <div class="stats" data-reveal data-delay="180">
+          <div class="stat"><b>5<span class="serif">+</span></b><span>Tecnologias</span></div>
+          <div class="stat"><b>100%</b><span>Suporte incluso</span></div>
+          <div class="stat"><b>1ª</b><span>Sessão com resultado</span></div>
+          <div class="stat"><b><span class="serif">∞</span></b><span>Faturamento</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DEPOIMENTOS ══════════════════ -->
+<section class="section" id="avaliacoes">
+  <div class="wrap">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">Avaliações reais</p>
+      <h2 class="h-section">O que dizem <span class="serif">nossas parceiras</span></h2>
+    </div>
+
+    <div class="reviews">
+      <article class="review" data-reveal>
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg></div>
+        <blockquote>“Empresa cuidadosa e atenciosa. Sempre disposta a nos ajudar com os melhores equipamentos e na elaboração de protocolos personalizados.”</blockquote>
+        <div class="review-who"><div class="avatar" aria-hidden="true">FL</div><div><b>Francilene Lira</b><span>Google · 10 meses atrás</span></div></div>
+      </article>
+
+      <article class="review" data-reveal data-delay="100">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg></div>
+        <blockquote>“Atendimento maravilhoso! Máquinas super modernas e tudo feito com muita responsabilidade e competência.”</blockquote>
+        <div class="review-who"><div class="avatar" aria-hidden="true">IF</div><div><b>Iuska Fernanda</b><span>Google · 5 meses atrás</span></div></div>
+      </article>
+
+      <article class="review" data-reveal data-delay="200">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg></div>
+        <blockquote>“Atendimento atencioso e maravilhoso. Equipamentos modernos, qualidade e excelência.”</blockquote>
+        <div class="review-who"><div class="avatar" aria-hidden="true">JM</div><div><b>Joana D'arc Miguel</b><span>Google · 2 meses atrás</span></div></div>
+      </article>
+
+      <article class="review" data-reveal data-delay="300">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9L12 2Z"/></svg></div>
+        <blockquote>“Excelente serviço. Recomendo.”</blockquote>
+        <div class="review-who"><div class="avatar" aria-hidden="true">CF</div><div><b>Caroline Fernandes</b><span>Google · 11 meses atrás</span></div></div>
+      </article>
+    </div>
+
+    <p class="reviews-note" data-reveal>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Avaliações verificadas no Google
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ PORTFÓLIO ══════════════════ -->
+<section class="section section--mist" id="tecnologias">
+  <div class="wrap">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">Portfólio completo</p>
+      <h2 class="h-section">Nossas <span class="serif">tecnologias</span></h2>
+      <p class="lead muted">Toque em cada equipamento para ver as imagens, os detalhes técnicos, os manípulos e os valores de locação.</p>
+    </div>
+
+    <div class="equip-grid">
+
+      <button class="card" type="button" data-modal="m-hifu" data-reveal aria-haspopup="dialog">
+        <div class="card-media">
+          <span class="card-tag">HIFU · Ultrassom focado</span>
+          <span class="card-anvisa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ANVISA</span>
+          <img src="assets/img/hifu.jpg" alt="Herus HIFU 4D" width="900" height="1350" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Herus HIFU 4D</h3>
+          <p>3 transdutores · profundidades de 1,5 a 13 mm · até 300 pontos focais por disparo.</p>
+          <p class="card-price">A partir de <b>R$ 800</b> / diária</p>
+          <div class="card-foot">
+            <span class="link-arrow">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" type="button" data-modal="m-criopad" data-reveal data-delay="100" aria-haspopup="dialog">
+        <div class="card-media">
+          <span class="card-tag">Criolipólise · Criofrequência</span>
+          <span class="card-anvisa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ANVISA</span>
+          <img src="assets/img/criopad.jpg" alt="Axcel Criopad Full" width="900" height="1350" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Axcel Criopad Full</h3>
+          <p>Placas P/M/G · sem vácuo, sem hematomas · de −15 °C a +50 °C.</p>
+          <p class="card-price">A partir de <b>R$ 600</b> / diária</p>
+          <div class="card-foot">
+            <span class="link-arrow">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" type="button" data-modal="m-microneedle" data-reveal data-delay="200" aria-haspopup="dialog">
+        <div class="card-media">
+          <span class="card-tag">RF fracionada · Microagulhamento</span>
+          <img src="assets/img/microneedle.jpg" alt="Axcel Microneedle" width="900" height="1350" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Axcel Microneedle</h3>
+          <p>Agulhas banhadas em ouro · profundidade de 0,2 a 3,5 mm · vácuo + Crio Cooling.</p>
+          <p class="card-price">A partir de <b>R$ 1.000</b> / diária</p>
+          <div class="card-foot">
+            <span class="link-arrow">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" type="button" data-modal="m-lipocavity" data-reveal aria-haspopup="dialog">
+        <div class="card-media">
+          <span class="card-tag">Ultracavitação</span>
+          <span class="card-anvisa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ANVISA</span>
+          <img src="assets/img/lipocavity.jpg" alt="Lipocavity 40" width="900" height="600" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Lipocavity 40</h3>
+          <p>40 kHz · 70 W · área de emissão de 24 cm² — a “lipo sem corte”.</p>
+          <p class="card-price">A partir de <b>R$ 300</b> / diária</p>
+          <div class="card-foot">
+            <span class="link-arrow">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </button>
+
+      <button class="card" type="button" data-modal="m-stimcare" data-reveal data-delay="100" aria-haspopup="dialog">
+        <div class="card-media">
+          <span class="card-tag">Eletroestimulação · HTM</span>
+          <span class="card-anvisa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ANVISA</span>
+          <img src="assets/img/stimcare.jpg" alt="Stim Care HTM" width="900" height="900" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Stim Care</h3>
+          <p>28 protocolos · correntes bifásicas + polarizadas · portátil e versátil.</p>
+          <p class="card-price">A partir de <b>R$ 150</b> / diária</p>
+          <div class="card-foot">
+            <span class="link-arrow">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </div>
+      </button>
+
+      <article class="pcard" data-reveal data-delay="200" style="display:flex;flex-direction:column;justify-content:center">
+        <div class="pcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg></div>
+        <h3>Combine tecnologias no mesmo dia</h3>
+        <p style="margin-bottom:22px">Criopad Full + Stim Care elimina a parestesia pós-criolipólise. Lipocavity 40 + Stim Care monta protocolos corporais de alto ticket. HIFU 4D + Microneedle entrega rejuvenescimento facial completo.</p>
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20montar%20um%20protocolo%20combinado%20com%20a%20BelleFacite." target="_blank" rel="noopener" style="align-self:flex-start">Montar meu protocolo</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FAQ ══════════════════ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2 class="h-section">Perguntas <span class="serif">frequentes</span></h2>
+    </div>
+
+    <div class="faq-grid" id="faqGrid">
+      <div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq1" aria-controls="fa1">
+            <span>Como funciona a locação?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa1" role="region" aria-labelledby="fq1"><div class="faq-a-inner"><p>Oferecemos três modalidades: diária (8h–12h de uso), pacote de 3 dias consecutivos e semana inteira (segunda a sábado). Entregamos e retiramos o equipamento no seu consultório, com treinamento personalizado incluso antes do uso.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq2" aria-controls="fa2">
+            <span>Preciso ter experiência prévia com o equipamento?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa2" role="region" aria-labelledby="fq2"><div class="faq-a-inner"><p>Não. Oferecemos treinamento personalizado com protocolos clínicos detalhados antes de cada locação. Você opera com segurança desde a primeira sessão, mesmo se nunca tiver usado a tecnologia antes.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq3" aria-controls="fa3">
+            <span>Os equipamentos têm Registro ANVISA?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa3" role="region" aria-labelledby="fq3"><div class="faq-a-inner"><p>Sim. Trabalhamos exclusivamente com tecnologias certificadas pela ANVISA: Herus HIFU 4D (80571459007), Axcel Criopad Full (80571459008), Lipocavity 40 (81243819004), Stim Care HTM (80212480027) e Axcel Microneedle. Segurança clínica e respaldo legal garantidos.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq4" aria-controls="fa4">
+            <span>Posso combinar equipamentos no mesmo dia?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa4" role="region" aria-labelledby="fq4"><div class="faq-a-inner"><p>Sim, e recomendamos. Algumas combinações são especialmente eficazes: Criopad Full + Stim Care elimina a parestesia pós-criolipólise; Lipocavity 40 + Stim Care cria protocolos corporais completos de alto ticket; Herus HIFU 4D + Microneedle entrega rejuvenescimento facial completo (lifting + textura).</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq5" aria-controls="fa5">
+            <span>As ponteiras do Axcel Microneedle estão incluídas?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa5" role="region" aria-labelledby="fq5"><div class="faq-a-inner"><p>A locação do equipamento é separada das ponteiras descartáveis. Cada ponteira individual custa R$ 300,00 e é descartada após o uso por questão de biossegurança. Você adquire a quantidade necessária para o número de sessões previstas.</p></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq6" aria-controls="fa6">
+            <span>Como funcionam os disparos do Herus HIFU 4D?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa6" role="region" aria-labelledby="fq6"><div class="faq-a-inner"><p>O equipamento gera disparos focais de ultrassom. O custo do disparo é cobrado à parte conforme o transdutor utilizado: Cartuchos Convencionais — R$ 1,30, Cartuchos 4D — R$ 1,70 e Cartuchos Pen — R$ 1,00 por disparo. A nossa versão do equipamento é completa, com os três tipos de transdutores inclusos.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq7" aria-controls="fa7">
+            <span>O Herus HIFU 4D pode ser usado em qualquer fototipo?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa7" role="region" aria-labelledby="fq7"><div class="faq-a-inner"><p>Sim. O Herus HIFU 4D é seguro e eficaz para todos os fototipos (I a VI), incluindo peles negras, e pode ser aplicado em qualquer estação do ano sem restrição de exposição solar pós-tratamento.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq8" aria-controls="fa8">
+            <span>Atendem fora de João Pessoa?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa8" role="region" aria-labelledby="fq8"><div class="faq-a-inner"><p>Atendemos prioritariamente em João Pessoa – PB e região metropolitana. Para outras cidades da Paraíba ou estados próximos, entre em contato pelo WhatsApp para avaliarmos a logística e o orçamento personalizado.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq9" aria-controls="fa9">
+            <span>Quais as formas de pagamento aceitas?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa9" role="region" aria-labelledby="fq9"><div class="faq-a-inner"><p>Trabalhamos com PIX, transferência bancária e parcelamento no cartão. Para clínicas parceiras com locações frequentes, temos condições especiais — fale conosco no WhatsApp para conhecer.</p></div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" id="fq10" aria-controls="fa10">
+            <span>Quanto tempo leva entre o orçamento e a entrega?</span>
+            <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>
+          </button>
+          <div class="faq-a" id="fa10" role="region" aria-labelledby="fq10"><div class="faq-a-inner"><p>Após a confirmação da locação, conseguimos entregar o equipamento em até 24 a 48 horas em João Pessoa, conforme a disponibilidade da agenda. Recomendamos reservar com antecedência para datas comerciais (Black Friday, fim de ano, datas comemorativas).</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CTA FINAL ══════════════════ -->
+<section class="section" id="contato" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <div class="cta-inner">
+        <h2>Pronto para transformar sua clínica <span class="serif">em referência local?</span></h2>
+        <p>Entre em contato agora e descubra qual tecnologia é perfeita para os seus tratamentos — com treinamento, suporte e entrega inclusos.</p>
+
+        <div class="cta-actions">
+          <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20dos%20equipamentos%20BelleFacite." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.33 9.33 0 0 1 2.75 6.65c0 5.18-4.22 9.41-9.41 9.41M20.4 3.58A11.3 11.3 0 0 0 12.04.2C5.8.2.73 5.27.73 11.5c0 1.99.52 3.94 1.51 5.65L.64 23l5.99-1.57a11.27 11.27 0 0 0 5.4 1.38h.01c6.23 0 11.3-5.07 11.31-11.3 0-3.02-1.18-5.86-3.31-8"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#tecnologias">Ver portfólio completo</a>
+        </div>
+
+        <div class="cta-contacts">
+          <a href="https://wa.me/5583991646936" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            (83) 99164-6936
+          </a>
+          <a href="https://instagram.com/bellefacite" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+            @bellefacite
+          </a>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            João Pessoa – PB
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="BelleFacite Equipamentos Estéticos" width="120" height="100" loading="lazy">
+        <p>Locação de tecnologias estéticas de alta performance em João Pessoa – PB. Equipamentos com Registro ANVISA, treinamento incluso e suporte durante toda a locação.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/bellefacite" target="_blank" rel="noopener" aria-label="Instagram da BelleFacite">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/5583991646936" target="_blank" rel="noopener" aria-label="WhatsApp da BelleFacite">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.33 9.33 0 0 1 2.75 6.65c0 5.18-4.22 9.41-9.41 9.41M20.4 3.58A11.3 11.3 0 0 0 12.04.2C5.8.2.73 5.27.73 11.5c0 1.99.52 3.94 1.51 5.65L.64 23l5.99-1.57a11.27 11.27 0 0 0 5.4 1.38h.01c6.23 0 11.3-5.07 11.31-11.3 0-3.02-1.18-5.86-3.31-8"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav aria-label="Links rápidos">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Tecnologias">
+        <h4>Tecnologias</h4>
+        <ul>
+          <li><a href="#tecnologias" data-modal="m-hifu">Herus HIFU 4D</a></li>
+          <li><a href="#tecnologias" data-modal="m-criopad">Axcel Criopad Full</a></li>
+          <li><a href="#tecnologias" data-modal="m-microneedle">Axcel Microneedle</a></li>
+          <li><a href="#tecnologias" data-modal="m-lipocavity">Lipocavity 40</a></li>
+          <li><a href="#tecnologias" data-modal="m-stimcare">Stim Care</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contato</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <a href="https://wa.me/5583991646936" target="_blank" rel="noopener">(83) 99164-6936</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+            <a href="https://instagram.com/bellefacite" target="_blank" rel="noopener">@bellefacite</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>João Pessoa – PB<br>e região metropolitana</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> BelleFacite Equipamentos Estéticos. Todos os direitos reservados.</span>
+      <span>Equipamentos com Registro ANVISA · João Pessoa – PB</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20dos%20equipamentos%20BelleFacite." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.33 9.33 0 0 1 2.75 6.65c0 5.18-4.22 9.41-9.41 9.41M20.4 3.58A11.3 11.3 0 0 0 12.04.2C5.8.2.73 5.27.73 11.5c0 1.99.52 3.94 1.51 5.65L.64 23l5.99-1.57a11.27 11.27 0 0 0 5.4 1.38h.01c6.23 0 11.3-5.07 11.31-11.3 0-3.02-1.18-5.86-3.31-8"/></svg>
+  <span>Falar no WhatsApp</span>
+</a>
+
+<!-- ══════════════════ MODAIS ══════════════════ -->
+<div class="modal-scrim" id="scrim">
+
+<!-- ---------- HERUS HIFU 4D ---------- -->
+<div class="modal" id="m-hifu" role="dialog" aria-modal="true" aria-labelledby="t-hifu" hidden>
+  <button class="modal-close" type="button" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+
+  <div class="modal-head">
+    <p class="eyebrow">HIFU · Ultrassom micro e macrofocado</p>
+    <h2 id="t-hifu">Herus HIFU 4D</h2>
+    <p class="modal-reg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Registro ANVISA 80571459007</p>
+  </div>
+
+  <div class="gallery" data-gallery>
+    <button class="gnav gnav--prev" type="button" data-gprev aria-label="Imagem anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="gnav gnav--next" type="button" data-gnext aria-label="Próxima imagem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <div class="gallery-track" data-gtrack>
+      <figure class="gslide"><img src="assets/img/hifu.jpg" alt="Herus HIFU 4D — equipamento completo" loading="lazy" decoding="async"><figcaption>Herus HIFU 4D — plataforma completa com os três tipos de transdutores</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/hifu-1.jpg" alt="Estojo com quatro cartuchos faciais e HIFU Pen" loading="lazy" decoding="async"><figcaption>Estojo com 4 cartuchos faciais + HIFU Pen — kit completo</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/hifu-2.jpg" alt="Cartuchos corporais DS 4-13.0 e DS 4-7.0" loading="lazy" decoding="async"><figcaption>Cartuchos corporais DS 4-13.0 e DS 4-7.0 — gordura profunda e contorno</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/hifu-3.jpg" alt="HIFU Pen com cartuchos DS 7-3.0 e DS 4-4.5" loading="lazy" decoding="async"><figcaption>HIFU Pen com cartuchos DS 7-3.0 e DS 4-4.5 — áreas delicadas</figcaption></figure>
+    </div>
+    <div class="gdots" data-gdots></div>
+  </div>
+
+  <div class="modal-body">
+    <p class="lead">O Herus HIFU 4D é a evolução do ultrassom microfocado tradicional. Combina ultrassom micro e macrofocado num mesmo equipamento, atingindo profundidades de até 13 mm com até 300 pontos focais por disparo. A versão da BelleFacite é a completa: inclui os três tipos de transdutores — Convencional, 4D e Pen — permitindo tratar desde grandes áreas corporais até regiões delicadas como periorbital, pescoço e contorno labial.</p>
+
+    <div>
+      <p class="block-title">Especificações técnicas</p>
+      <dl class="specs">
+        <div><dt>Tecnologia</dt><dd>Ultrassom Focado</dd></div>
+        <div><dt>Profundidade</dt><dd>1,5 a 13 mm</dd></div>
+        <div><dt>Pontos focais</dt><dd>Até 300/disparo</dd></div>
+        <div><dt>Cartuchos</dt><dd>5 (3 face + 2 corpo)</dd></div>
+        <div><dt>Transdutores</dt><dd>Convencional · 4D · Pen</dd></div>
+        <div><dt>Fototipos</dt><dd>Todos (I a VI)</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <p class="block-title">Indicações</p>
+      <ul class="tags"><li>Lifting facial</li><li>Flacidez corporal</li><li>Colágeno</li><li>Redução de gordura</li><li>Áreas delicadas</li></ul>
+    </div>
+
+    <div>
+      <p class="block-title">Por que vale a pena para a sua clínica</p>
+      <div class="gains">
+        <div class="gain"><b><em>💰</em>Alto ticket por sessão</b><p>HIFU é um dos tratamentos mais valorizados da estética atual. Cada sessão gera retorno expressivo e o valor da locação se paga rapidamente.</p></div>
+        <div class="gain"><b><em>🎯</em>Diferencial competitivo real</b><p>Pouquíssimas clínicas oferecem HIFU 4D com Ponteira Pen. Quem oferece se destaca, fideliza e atrai por indicação.</p></div>
+        <div class="gain"><b><em>✨</em>Resultado visível na sessão</b><p>A paciente já sai com sensação de lifting e pele mais firme. Satisfação imediata gera retorno e recomendação espontânea.</p></div>
+        <div class="gain"><b><em>📅</em>Apenas 1 a 2 sessões/ano</b><p>Tratamento completo com resultados que duram até 12 meses. Conveniente para o paciente, lucrativo para a clínica.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="block-title">Valores de locação</p>
+      <table class="price-table">
+        <thead><tr><th scope="col">Modalidade</th><th scope="col">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Diária (8h–12h)</td><td>R$ 800,00</td></tr>
+          <tr><td>3 dias consecutivos</td><td>R$ 1.200,00</td></tr>
+          <tr><td>Semana (seg–sáb)</td><td>R$ 1.600,00</td></tr>
+          <tr class="is-extra"><td>Disparo Convencional</td><td>R$ 1,30</td></tr>
+          <tr class="is-extra"><td>Disparo 4D</td><td>R$ 1,70</td></tr>
+          <tr class="is-extra"><td>Disparo Pen</td><td>R$ 1,00</td></tr>
+        </tbody>
+      </table>
+      <p class="price-note">Os disparos são cobrados à parte, conforme o transdutor utilizado. Os três tipos de transdutores acompanham o equipamento.</p>
+    </div>
+
+    <div class="modal-pitch">
+      <p>Ao locar o Herus HIFU 4D completo com Ponteira Pen, você passa a oferecer um dos tratamentos mais valorizados da estética sem comprometer capital com a compra do equipamento. Investimento baixo, retorno por sessão imediato.</p>
+      <div class="modal-actions">
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20do%20Herus%20HIFU%204D." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost" href="https://instagram.com/bellefacite" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- AXCEL CRIOPAD FULL ---------- -->
+<div class="modal" id="m-criopad" role="dialog" aria-modal="true" aria-labelledby="t-criopad" hidden>
+  <button class="modal-close" type="button" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+
+  <div class="modal-head">
+    <p class="eyebrow">Criolipólise de placas · Criofrequência</p>
+    <h2 id="t-criopad">Axcel Criopad Full</h2>
+    <p class="modal-reg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Registro ANVISA 80571459008</p>
+  </div>
+
+  <div class="gallery" data-gallery>
+    <button class="gnav gnav--prev" type="button" data-gprev aria-label="Imagem anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="gnav gnav--next" type="button" data-gnext aria-label="Próxima imagem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <div class="gallery-track" data-gtrack>
+      <figure class="gslide"><img src="assets/img/criopad.jpg" alt="Axcel Criopad Full — equipamento completo" loading="lazy" decoding="async"><figcaption>Axcel Criopad Full — criolipólise de placas e criofrequência num só equipamento</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/criopad-1.jpg" alt="Manípulos P, M e G do Axcel Criopad Full" loading="lazy" decoding="async"><figcaption>Manípulos P, M e G — adaptação anatômica a cada região</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/criopad-2.jpg" alt="Placa de contato em alumínio" loading="lazy" decoding="async"><figcaption>Placa de contato em alumínio — sem vácuo, sem hematomas</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/criopad-3.jpg" alt="Kit de ponteiras de criofrequência mono e bipolar" loading="lazy" decoding="async"><figcaption>Kit de ponteiras de criofrequência mono e bipolar — face, corpo e íntimo</figcaption></figure>
+    </div>
+    <div class="gdots" data-gdots></div>
+  </div>
+
+  <div class="modal-body">
+    <p class="lead">O Axcel Criopad Full é a única plataforma do mundo que reúne criolipólise de placas e criofrequência num único equipamento. A criolipólise atua por apoptose dos adipócitos pelo frio extremo (até −15 °C), eliminando gordura localizada. A criofrequência combina aquecimento profundo com resfriamento da superfície (até −10 °C), estimulando colágeno e elastina para lifting e tratamento de flacidez. Sem vácuo — elimina os hematomas e o desconforto típicos da criolipólise tradicional.</p>
+
+    <div>
+      <p class="block-title">Especificações técnicas</p>
+      <dl class="specs">
+        <div><dt>Tecnologia</dt><dd>Criolipólise + Criofreq.</dd></div>
+        <div><dt>Temperatura</dt><dd>−15 °C a +50 °C</dd></div>
+        <div><dt>Aplicação</dt><dd>Sem vácuo</dd></div>
+        <div><dt>Manípulos</dt><dd>P · M · G</dd></div>
+        <div><dt>Criofrequência</dt><dd>Mono e Bipolar</dd></div>
+        <div><dt>Interface</dt><dd>Touch screen</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <p class="block-title">Indicações</p>
+      <ul class="tags"><li>Gordura localizada</li><li>Lifting corporal</li><li>Flacidez tissular</li><li>Celulite (FEG)</li><li>Rejuvenescimento íntimo</li><li>Cicatrizes/aderências</li></ul>
+    </div>
+
+    <div>
+      <p class="block-title">Por que vale a pena para a sua clínica</p>
+      <div class="gains">
+        <div class="gain"><b><em>💸</em>Alta demanda, agenda lotada</b><p>Criolipólise é um dos procedimentos mais buscados. Você atende vários pacientes no mesmo dia, multiplicando o faturamento.</p></div>
+        <div class="gain"><b><em>🔗</em>Dois equipamentos em um</b><p>Criolipólise + criofrequência numa só plataforma. Protocolos completos sem precisar de múltiplos aparelhos.</p></div>
+        <div class="gain"><b><em>❄️</em>Resultado em 1 sessão</b><p>Redução de gordura mensurável desde a primeira sessão. A paciente sente e vê o resultado, gerando retorno e indicação.</p></div>
+        <div class="gain"><b><em>😌</em>Sem hematomas, sem desconforto</b><p>Sem vácuo significa sem marcas, sem dor pós-procedimento. Diferencial sentido pela paciente já durante o atendimento.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="block-title">Valores de locação</p>
+      <table class="price-table">
+        <thead><tr><th scope="col">Modalidade</th><th scope="col">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Diária (8h–12h)</td><td>R$ 600,00</td></tr>
+          <tr><td>3 dias consecutivos</td><td>R$ 1.000,00</td></tr>
+          <tr><td>Semana (seg–sáb)</td><td>R$ 1.600,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-pitch">
+      <p>Com o Criopad Full você pode montar um dia especial de criolipólise na sua clínica, lotar a agenda, cobrar por sessão e gerar faturamento que paga a locação com folga já nas primeiras horas. E sem o desconforto típico da criolipólise convencional.</p>
+      <div class="modal-actions">
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20do%20Axcel%20Criopad%20Full." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost" href="https://instagram.com/bellefacite" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- AXCEL MICRONEEDLE ---------- -->
+<div class="modal" id="m-microneedle" role="dialog" aria-modal="true" aria-labelledby="t-microneedle" hidden>
+  <button class="modal-close" type="button" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+
+  <div class="modal-head">
+    <p class="eyebrow">Microagulhamento robótico · RF · Vácuo</p>
+    <h2 id="t-microneedle">Axcel Microneedle</h2>
+  </div>
+
+  <div class="gallery" data-gallery>
+    <button class="gnav gnav--prev" type="button" data-gprev aria-label="Imagem anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="gnav gnav--next" type="button" data-gnext aria-label="Próxima imagem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    <div class="gallery-track" data-gtrack>
+      <figure class="gslide"><img src="assets/img/microneedle.jpg" alt="Axcel Microneedle — equipamento completo" loading="lazy" decoding="async"><figcaption>Axcel Microneedle — microagulhamento robótico, RF bipolar e vácuo</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/microneedle-1.jpg" alt="Ponteiras especializadas do Axcel Microneedle" loading="lazy" decoding="async"><figcaption>Ponteiras especializadas: microcristais, RF com vácuo e esferas cromadas</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/microneedle-2.jpg" alt="Aplicador Crio Cooling" loading="lazy" decoding="async"><figcaption>Aplicador Crio Cooling — resfriamento ativo antes e após o disparo</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/microneedle-3.jpg" alt="Ponteira de microagulhamento com LED e cartuchos descartáveis" loading="lazy" decoding="async"><figcaption>Ponteira de microagulhamento com LED + 3 cartuchos descartáveis</figcaption></figure>
+      <figure class="gslide"><img src="assets/img/microneedle-4.jpg" alt="Cartuchos com microagulhas banhadas em ouro" loading="lazy" decoding="async"><figcaption>Microagulhas banhadas em ouro — antimicrobianas e altamente condutivas</figcaption></figure>
+    </div>
+    <div class="gdots" data-gdots></div>
+  </div>
+
+  <div class="modal-body">
+    <p class="lead">O Axcel Microneedle combina microagulhamento robótico, radiofrequência bipolar e sistema de vácuo num único equipamento. As microagulhas banhadas em ouro garantem propriedades antimicrobianas e alta condutividade elétrica, entregando radiofrequência diretamente na derme com profundidade ajustável de 0,2 a 3,5 mm. O sistema de vácuo garante aplicação homogênea, e o aplicador Crio Cooling oferece resfriamento antes e após cada disparo — conforto e segurança superiores.</p>
+
+    <div>
+      <p class="block-title">Especificações técnicas</p>
+      <dl class="specs">
+        <div><dt>Tecnologia</dt><dd>Microag. + RF + Vácuo</dd></div>
+        <div><dt>Profundidade</dt><dd>0,2 a 3,5 mm</dd></div>
+        <div><dt>Material das agulhas</dt><dd>Banhadas em ouro</dd></div>
+        <div><dt>Radiofrequência</dt><dd>Mono e Bipolar</dd></div>
+        <div><dt>Sistema de vácuo</dt><dd>Integrado</dd></div>
+        <div><dt>Crio Cooling</dt><dd>Antes/após disparo</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <p class="block-title">Indicações</p>
+      <ul class="tags"><li>Melasma</li><li>Cicatriz de acne</li><li>Estrias</li><li>Poros dilatados</li><li>Rejuv. íntimo</li><li>Quelóides</li><li>Rugas</li><li>Drug Delivery</li></ul>
+    </div>
+
+    <div>
+      <p class="block-title">Por que vale a pena para a sua clínica</p>
+      <div class="gains">
+        <div class="gain"><b><em>💡</em>Atrai pacientes difíceis de tratar</b><p>Melasma, cicatrizes de acne e estrias são queixas comuns com poucas opções eficazes. Ter esse equipamento posiciona sua clínica como referência regional.</p></div>
+        <div class="gain"><b><em>💉</em>Drug Delivery potencializa resultados</b><p>Os microcanais criados pelas agulhas permitem absorção potencializada de ativos cosmecêuticos, elevando o nível dos protocolos e o valor percebido.</p></div>
+        <div class="gain"><b><em>📸</em>Fotos antes e depois impactantes</b><p>Resultados visíveis e documentáveis. Ótimo conteúdo para redes sociais que gera autoridade e atrai novos pacientes organicamente.</p></div>
+        <div class="gain"><b><em>🥇</em>Microagulhas banhadas a ouro</b><p>Melhor condução elétrica + propriedades antimicrobianas + menor desconforto. Experiência mais agradável, resultado mais preciso.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="block-title">Valores de locação</p>
+      <table class="price-table">
+        <thead><tr><th scope="col">Modalidade</th><th scope="col">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Diária (8h–12h)</td><td>R$ 1.000,00</td></tr>
+          <tr><td>3 dias consecutivos</td><td>R$ 1.500,00</td></tr>
+          <tr><td>Semana (seg–sáb)</td><td>R$ 2.000,00</td></tr>
+          <tr class="is-extra"><td>Ponteira descartável</td><td>R$ 300,00/un.</td></tr>
+        </tbody>
+      </table>
+      <p class="price-note">As ponteiras descartáveis são cobradas à parte e descartadas após o uso por questão de biossegurança.</p>
+    </div>
+
+    <div class="modal-pitch">
+      <p>Ao alugar o Microneedle você oferece um dos tratamentos mais exclusivos do mercado. Clínicas que trabalham com microagulhamento robótico com agulhas em ouro cobram sessões significativamente mais caras e constroem reputação de alto padrão com rapidez.</p>
+      <div class="modal-actions">
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20do%20Axcel%20Microneedle." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost" href="https://instagram.com/bellefacite" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- LIPOCAVITY 40 ---------- -->
+<div class="modal" id="m-lipocavity" role="dialog" aria-modal="true" aria-labelledby="t-lipocavity" hidden>
+  <button class="modal-close" type="button" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+
+  <div class="modal-head">
+    <p class="eyebrow">Ultracavitação · Baixa frequência</p>
+    <h2 id="t-lipocavity">Lipocavity 40</h2>
+    <p class="modal-reg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Registro ANVISA 81243819004</p>
+  </div>
+
+  <div class="gallery" data-gallery>
+    <div class="gallery-track" data-gtrack>
+      <figure class="gslide"><img src="assets/img/lipocavity.jpg" alt="Lipocavity 40 — equipamento de ultracavitação" loading="lazy" decoding="async"><figcaption>Lipocavity 40 — ultracavitação de 40 kHz com área de emissão de 24 cm²</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <p class="lead">O Lipocavity 40 emite ondas ultrassônicas de baixa frequência (40 kHz) que provocam o fenômeno da cavitação acústica: microbolhas formadas no interior do tecido adiposo implodem e rompem a membrana do adipócito. O conteúdo lipídico liberado é metabolizado pelo fígado e drenado pelo sistema linfático. Conhecida como “lipo sem corte”, a técnica não é invasiva, não tem recuperação e os resultados são progressivos em abdômen, flancos, culotes, coxas e braços.</p>
+
+    <div>
+      <p class="block-title">Especificações técnicas</p>
+      <dl class="specs">
+        <div><dt>Tecnologia</dt><dd>Ultracavitação</dd></div>
+        <div><dt>Frequência</dt><dd>40 kHz</dd></div>
+        <div><dt>Potência</dt><dd>70 W</dd></div>
+        <div><dt>Área de emissão</dt><dd>24 cm²</dd></div>
+        <div><dt>Penetração</dt><dd>Profunda</dd></div>
+        <div><dt>Ruído</dt><dd>Reduzido</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <p class="block-title">Indicações</p>
+      <ul class="tags"><li>Gordura localizada</li><li>Celulite</li><li>Remodelação corporal</li><li>Redução de medidas</li></ul>
+    </div>
+
+    <div>
+      <p class="block-title">Por que vale a pena para a sua clínica</p>
+      <div class="gains">
+        <div class="gain"><b><em>📉</em>Baixo custo, retorno rápido</b><p>Com diária a R$ 300, você recupera o investimento com poucas sessões e tem lucro desde o primeiro dia de locação.</p></div>
+        <div class="gain"><b><em>🔄</em>Alta rotatividade na agenda</b><p>Procedimento rápido, sem recuperação. Você atende mais pacientes por dia sem comprometer a qualidade.</p></div>
+        <div class="gain"><b><em>🤝</em>Combina com outros protocolos</b><p>Excelente associado à criolipólise (Criopad Full), drenagem linfática e radiofrequência — ataca o adipócito por dois mecanismos diferentes.</p></div>
+        <div class="gain"><b><em>📣</em>Resultado progressivo fideliza</b><p>A paciente percebe evolução a cada sessão, criando vínculo e garantindo continuidade nos atendimentos.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="block-title">Valores de locação</p>
+      <table class="price-table">
+        <thead><tr><th scope="col">Modalidade</th><th scope="col">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Diária</td><td>R$ 300,00</td></tr>
+          <tr><td>3 dias consecutivos</td><td>R$ 600,00</td></tr>
+          <tr><td>Semana (seg–sáb)</td><td>R$ 800,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-pitch">
+      <p>O Lipocavity 40 é uma excelente porta de entrada para quem quer testar a locação com baixo custo e retorno rápido. Com uma agenda de ultracavitação você cobre a locação nas primeiras horas e gera lucro real ao longo do dia.</p>
+      <div class="modal-actions">
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20do%20Lipocavity%2040." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost" href="https://instagram.com/bellefacite" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- STIM CARE ---------- -->
+<div class="modal" id="m-stimcare" role="dialog" aria-modal="true" aria-labelledby="t-stimcare" hidden>
+  <button class="modal-close" type="button" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+
+  <div class="modal-head">
+    <p class="eyebrow">Eletroestimulação portátil · HTM</p>
+    <h2 id="t-stimcare">Stim Care</h2>
+    <p class="modal-reg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Registro ANVISA 80212480027</p>
+  </div>
+
+  <div class="gallery" data-gallery>
+    <div class="gallery-track" data-gtrack>
+      <figure class="gslide"><img src="assets/img/stimcare.jpg" alt="Stim Care HTM — estimulador portátil" loading="lazy" decoding="async"><figcaption>Stim Care HTM — 28 protocolos pré-programados, bateria ou rede elétrica</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <p class="lead">O Stim Care é um estimulador portátil da HTM com correntes bifásicas (TENS, FES, HighForce, Russa, Lipólise — até 100 mA, 2 canais) e polarizadas (Galvânica 30 mA, Microgalvânica e MENS — 1000 μA). Tem 28 protocolos pré-programados e permite criar parâmetros personalizados. Funciona com bateria ou rede elétrica — o equipamento mais versátil do portfólio. Quando aplicado junto à criolipólise, mantém a comunicação neural ativa durante o congelamento, reduzindo ou eliminando a parestesia pós-procedimento — uma das maiores queixas em criolipólise convencional.</p>
+
+    <div>
+      <p class="block-title">Especificações técnicas</p>
+      <dl class="specs">
+        <div><dt>Bifásicas</dt><dd>TENS · FES · Russa · HighForce · Lipólise</dd></div>
+        <div><dt>Polarizadas</dt><dd>Galvânica · Microgalvânica · MENS</dd></div>
+        <div><dt>Protocolos</dt><dd>28 pré-programados</dd></div>
+        <div><dt>Display</dt><dd>OLED colorido</dd></div>
+        <div><dt>Tempo</dt><dd>1 a 60 min</dd></div>
+        <div><dt>Alimentação</dt><dd>Bateria + Rede</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <p class="block-title">Indicações</p>
+      <ul class="tags"><li>Anti-parestesia</li><li>Eletrolipólise</li><li>Tonificação muscular</li><li>Drenagem</li><li>Reparo tecidual</li><li>Rejuv. facial</li></ul>
+    </div>
+
+    <div>
+      <p class="block-title">Por que vale a pena para a sua clínica</p>
+      <div class="gains">
+        <div class="gain"><b><em>🧠</em>Elimina a parestesia pós-criolipólise</b><p>A principal queixa pós-criolipólise desaparece. A paciente termina o procedimento sem formigamento e sem desconforto.</p></div>
+        <div class="gain"><b><em>⭐</em>Eleva o nível do atendimento</b><p>Pouquíssimas clínicas oferecem esse protocolo combinado. Você se diferencia e gera confiança imediata na paciente.</p></div>
+        <div class="gain"><b><em>💆</em>Versátil — facial e corporal</b><p>Além de potencializar a criolipólise, funciona em protocolos faciais de rejuvenescimento, lipólise, drenagem e dor.</p></div>
+        <div class="gain"><b><em>💰</em>Custo baixo, impacto alto</b><p>A apenas R$ 150/diária, tem o melhor custo-benefício do portfólio. Agrega valor sem pesar no orçamento da clínica.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="block-title">Valores de locação</p>
+      <table class="price-table">
+        <thead><tr><th scope="col">Modalidade</th><th scope="col">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Diária</td><td>R$ 150,00</td></tr>
+          <tr><td>3 dias consecutivos</td><td>R$ 300,00</td></tr>
+          <tr><td>Semana (seg–sáb)</td><td>R$ 600,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-pitch">
+      <p>Por R$ 150 de locação você entrega uma experiência que muda a percepção da paciente sobre a sua clínica. Ela termina sem desconforto, conta para outras pessoas e volta. Um dos melhores investimentos do dia.</p>
+      <div class="modal-actions">
+        <a class="btn btn--pink" href="https://wa.me/5583991646936?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20loca%C3%A7%C3%A3o%20do%20Stim%20Care." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost" href="https://instagram.com/bellefacite" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /scrim -->
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- ano ---------- */
+  var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- header sticky ---------- */
+  var header = document.getElementById('header');
+  function onScroll(){ header.classList.toggle('is-stuck', window.scrollY > 8); }
+  onScroll();
+
+  /* ---------- menu mobile ---------- */
+  var toggle = document.getElementById('navToggle');
+  var mnav = document.getElementById('mobileNav');
+  function closeNav(){ toggle.setAttribute('aria-expanded','false'); mnav.classList.remove('is-open'); }
+  toggle.addEventListener('click', function(){
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    mnav.classList.toggle('is-open', !open);
+  });
+  mnav.addEventListener('click', function(e){ if (e.target.closest('a')) closeNav(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
+
+  /* ---------- reveal ao scroll ---------- */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        el.style.transitionDelay = (el.dataset.delay || 0) + 'ms';
+        el.classList.add('is-in');
+        io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- parallax do hero + botão flutuante ---------- */
+  var heroImg = document.getElementById('heroImg');
+  var waFloat = document.getElementById('waFloat');
+  var footerEl = document.querySelector('.site-footer');
+  var ticking = false;
+  function frame(){
+    var sy = window.scrollY;
+    if (heroImg && !reduce && sy < window.innerHeight * 1.2) {
+      heroImg.style.transform = 'translate3d(0,' + (sy * 0.09).toFixed(2) + 'px,0) scale(1.04)';
+    }
+    /* some ao chegar no rodapé, onde já existem os contatos */
+    var overFooter = footerEl && footerEl.getBoundingClientRect().top < window.innerHeight - 40;
+    waFloat.classList.toggle('is-visible', sy > 560 && !overFooter);
+    onScroll();
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(frame); }
+  }, { passive: true });
+  frame();
+
+  /* ---------- FAQ ---------- */
+  function setFaq(item, open){
+    item.classList.toggle('is-open', open);
+    item.querySelector('.faq-q').setAttribute('aria-expanded', String(open));
+  }
+  var faqItems = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+  faqItems.forEach(function(item){
+    item.querySelector('.faq-q').addEventListener('click', function(){
+      var open = item.classList.contains('is-open');
+      faqItems.forEach(function(other){ if (other !== item) setFaq(other, false); });
+      setFaq(item, !open);
+    });
+  });
+
+  /* ---------- galerias ---------- */
+  document.querySelectorAll('[data-gallery]').forEach(function(gal){
+    var track = gal.querySelector('[data-gtrack]');
+    var slides = gal.querySelectorAll('.gslide');
+    var dotsBox = gal.querySelector('[data-gdots]');
+    var prev = gal.querySelector('[data-gprev]');
+    var next = gal.querySelector('[data-gnext]');
+    if (slides.length < 2) {
+      if (prev) prev.remove();
+      if (next) next.remove();
+      if (dotsBox) dotsBox.remove();
+      return;
+    }
+    var dots = [];
+    for (var i = 0; i < slides.length; i++) {
+      (function(idx){
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Ir para a imagem ' + (idx + 1));
+        b.addEventListener('click', function(){ go(idx); });
+        dotsBox.appendChild(b);
+        dots.push(b);
+      })(i);
+    }
+    /* distância entre slides; nunca 0 (o modal começa oculto, onde tudo mede 0) */
+    function pitch(){
+      var p = slides[1].offsetLeft - slides[0].offsetLeft;
+      if (!p) p = slides[0].offsetWidth || track.clientWidth;
+      return p || 1;
+    }
+    function index(){
+      var i = Math.round(track.scrollLeft / pitch());
+      if (!isFinite(i)) i = 0;
+      return Math.max(0, Math.min(slides.length - 1, i));
+    }
+    /* o scroll-snap mandatory cancela o scrollTo suave do Chrome;
+       desligamos o snap durante a animação e religamos ao final */
+    var snapTimer;
+    function go(i){
+      if (!isFinite(i)) i = 0;
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      var left = i * pitch();
+      if (reduce) { track.scrollLeft = left; sync(); return; }
+      track.style.scrollSnapType = 'none';
+      track.scrollTo({ left: left, behavior: 'smooth' });
+      window.clearTimeout(snapTimer);
+      snapTimer = window.setTimeout(function(){
+        track.scrollLeft = left;
+        track.style.scrollSnapType = '';
+        sync();
+      }, 620);
+    }
+    function sync(){
+      var i = index();
+      dots.forEach(function(d, n){ d.setAttribute('aria-current', String(n === i)); });
+      prev.disabled = i <= 0;
+      next.disabled = i >= slides.length - 1;
+    }
+    prev.addEventListener('click', function(){ go(index() - 1); });
+    next.addEventListener('click', function(){ go(index() + 1); });
+    track.addEventListener('scroll', function(){ window.requestAnimationFrame(sync); }, { passive: true });
+    gal.__sync = sync;
+    sync();
+  });
+
+  /* ---------- modais ---------- */
+  var scrim = document.getElementById('scrim');
+  var current = null, lastFocus = null;
+
+  function openModal(id){
+    var modal = document.getElementById(id);
+    if (!modal) return;
+    lastFocus = document.activeElement;
+    if (current) current.hidden = true;
+    current = modal;
+    modal.hidden = false;
+    scrim.classList.add('is-open');
+    document.body.classList.add('is-locked');
+    modal.scrollTop = 0;
+    modal.querySelectorAll('[data-gallery]').forEach(function(g){ if (g.__sync) g.__sync(); });
+    var closeBtn = modal.querySelector('[data-close]');
+    if (closeBtn) closeBtn.focus({ preventScroll: true });
+  }
+  function closeModal(){
+    if (!current) return;
+    scrim.classList.remove('is-open');
+    document.body.classList.remove('is-locked');
+    var m = current; current = null;
+    window.setTimeout(function(){ if (!current) m.hidden = true; }, 320);
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-modal]');
+    if (trigger) { e.preventDefault(); closeNav(); openModal(trigger.dataset.modal); return; }
+    if (e.target.closest('[data-close]')) { closeModal(); return; }
+    if (e.target === scrim) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (!current) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      var btn = current.querySelector(e.key === 'ArrowRight' ? '[data-gnext]' : '[data-gprev]');
+      if (btn && !btn.disabled) btn.click();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    var focusables = current.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (!focusables.length) return;
+    var first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BelleFacite Equipamentos Estéticos",
+  "description": "Locação de equipamentos estéticos de alta performance com Registro ANVISA em João Pessoa – PB, com treinamento, suporte técnico e entrega inclusos.",
+  "url": "https://bellefacite.com.br/",
+  "image": "https://bellefacite.com.br/assets/img/hero.jpg",
+  "logo": "https://bellefacite.com.br/assets/img/logo.png",
+  "telephone": "+5583991646936",
+  "priceRange": "R$ 150 - R$ 2.000",
+  "address": { "@type": "PostalAddress", "addressLocality": "João Pessoa", "addressRegion": "PB", "addressCountry": "BR" },
+  "areaServed": [
+    { "@type": "City", "name": "João Pessoa" },
+    { "@type": "State", "name": "Paraíba" }
+  ],
+  "sameAs": ["https://instagram.com/bellefacite"],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "4", "bestRating": "5" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tecnologias para locação",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Herus HIFU 4D" }, "price": "800", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Axcel Criopad Full" }, "price": "600", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Axcel Microneedle" }, "price": "1000", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Lipocavity 40" }, "price": "300", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stim Care HTM" }, "price": "150", "priceCurrency": "BRL" }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Como funciona a locação?", "acceptedAnswer": { "@type": "Answer", "text": "Oferecemos três modalidades: diária (8h–12h de uso), pacote de 3 dias consecutivos e semana inteira (segunda a sábado). Entregamos e retiramos o equipamento no seu consultório, com treinamento personalizado incluso antes do uso." } },
+    { "@type": "Question", "name": "Preciso ter experiência prévia com o equipamento?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Oferecemos treinamento personalizado com protocolos clínicos detalhados antes de cada locação. Você opera com segurança desde a primeira sessão, mesmo se nunca tiver usado a tecnologia antes." } },
+    { "@type": "Question", "name": "Os equipamentos têm Registro ANVISA?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Trabalhamos exclusivamente com tecnologias certificadas pela ANVISA: Herus HIFU 4D (80571459007), Axcel Criopad Full (80571459008), Lipocavity 40 (81243819004), Stim Care HTM (80212480027) e Axcel Microneedle." } },
+    { "@type": "Question", "name": "Posso combinar equipamentos no mesmo dia?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, e recomendamos. Criopad Full + Stim Care elimina a parestesia pós-criolipólise; Lipocavity 40 + Stim Care cria protocolos corporais completos de alto ticket; Herus HIFU 4D + Microneedle entrega rejuvenescimento facial completo." } },
+    { "@type": "Question", "name": "As ponteiras do Axcel Microneedle estão incluídas?", "acceptedAnswer": { "@type": "Answer", "text": "A locação do equipamento é separada das ponteiras descartáveis. Cada ponteira individual custa R$ 300,00 e é descartada após o uso por questão de biossegurança." } },
+    { "@type": "Question", "name": "Como funcionam os disparos do Herus HIFU 4D?", "acceptedAnswer": { "@type": "Answer", "text": "O custo do disparo é cobrado à parte conforme o transdutor: Cartuchos Convencionais R$ 1,30, Cartuchos 4D R$ 1,70 e Cartuchos Pen R$ 1,00 por disparo. A nossa versão do equipamento é completa, com os três tipos de transdutores inclusos." } },
+    { "@type": "Question", "name": "O Herus HIFU 4D pode ser usado em qualquer fototipo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. É seguro e eficaz para todos os fototipos (I a VI), incluindo peles negras, e pode ser aplicado em qualquer estação do ano sem restrição de exposição solar pós-tratamento." } },
+    { "@type": "Question", "name": "Atendem fora de João Pessoa?", "acceptedAnswer": { "@type": "Answer", "text": "Atendemos prioritariamente em João Pessoa – PB e região metropolitana. Para outras cidades da Paraíba ou estados próximos, entre em contato pelo WhatsApp para avaliarmos a logística." } },
+    { "@type": "Question", "name": "Quais as formas de pagamento aceitas?", "acceptedAnswer": { "@type": "Answer", "text": "Trabalhamos com PIX, transferência bancária e parcelamento no cartão. Para clínicas parceiras com locações frequentes, temos condições especiais." } },
+    { "@type": "Question", "name": "Quanto tempo leva entre o orçamento e a entrega?", "acceptedAnswer": { "@type": "Answer", "text": "Após a confirmação da locação, conseguimos entregar o equipamento em até 24 a 48 horas em João Pessoa, conforme a disponibilidade da agenda." } }
+  ]
+}
+</script>
+
+</body>
+</html>

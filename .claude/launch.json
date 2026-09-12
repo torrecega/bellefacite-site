@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "bellefacite", "runtimeExecutable": "node", "runtimeArgs": [".claude/serve.cjs"], "port": 4321 }
+  ]
+}
