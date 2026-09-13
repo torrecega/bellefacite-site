@@ -103,6 +103,10 @@
       modalidade: 'diaria',
       sessoes: PADRAO.hifu.sessoes,
       preco: PADRAO.hifu.preco,
+      // custo por sessão que não vem do equipamento (gel, descartável, taxa de
+      // cartão, imposto). Começa em zero: essa conta é de cada clínica, não
+      // cabe a nós chutar um valor.
+      outros: 0,
       disparos: 500,
       cartucho: 'convencional'
     };
@@ -118,6 +122,7 @@
       disparosMenos: $('#calc-disparos-menos'),
       disparosMais: $('#calc-disparos-mais'),
       preco: $('#calc-preco'),
+      outros: $('#calc-outros'),
       campoDisparos: $('#campo-disparos'),
       campoCartucho: $('#campo-cartucho'),
       lucro: $('#calc-lucro'),
@@ -126,12 +131,16 @@
       linhaLocacao: $('#linha-locacao'),
       linhaInsumo: $('#linha-insumo'),
       linhaInsumoItem: $('#linha-insumo-item'),
+      linhaOutros: $('#linha-outros'),
+      linhaOutrosItem: $('#linha-outros-item'),
       linhaTotal: $('#linha-total'),
       rotuloLocacao: $('#rotulo-locacao'),
       rotuloInsumo: $('#rotulo-insumo'),
+      rotuloOutros: $('#rotulo-outros'),
       cta: $('#calc-cta')
     };
 
+    // Insumo que sai do próprio equipamento, com preço de tabela da BelleFacite.
     function insumoPorSessao() {
       if (estado.equip === 'hifu') return estado.disparos * CARTUCHO[estado.cartucho];
       if (estado.equip === 'microneedle') return PONTEIRA;
@@ -150,9 +159,11 @@
       var porSessao = insumoPorSessao();
       var receita = estado.sessoes * estado.preco;
       var insumos = estado.sessoes * porSessao;
-      var total = locacao + insumos;
+      var outros = estado.sessoes * estado.outros;
+      var total = locacao + insumos + outros;
       var lucro = receita - total;
-      var margem = estado.preco - porSessao;
+      // O que sobra de cada sessão para abater a locação.
+      var margem = estado.preco - porSessao - estado.outros;
 
       el.lucro.textContent = brl.format(lucro);
       el.lucro.dataset.negative = String(lucro <= 0);
@@ -167,7 +178,7 @@
             'ª sessão</strong>. Aumente as sessões do período para cobrir o custo.';
         }
       } else {
-        el.breakeven.innerHTML = 'O preço por sessão não cobre nem o insumo. Ajuste o valor cobrado.';
+        el.breakeven.innerHTML = 'O que você cobra por sessão não cobre nem o custo dela. Ajuste o preço.';
       }
 
       el.linhaReceita.textContent = brl.format(receita);
@@ -183,6 +194,15 @@
           : 'Ponteiras descartáveis (' + estado.sessoes + ')';
       } else {
         el.linhaInsumoItem.hidden = true;
+      }
+
+      if (outros > 0) {
+        el.linhaOutrosItem.hidden = false;
+        el.linhaOutros.textContent = brl.format(outros);
+        el.rotuloOutros.textContent = 'Outros custos (' + estado.sessoes +
+          (estado.sessoes === 1 ? ' sessão)' : ' sessões)');
+      } else {
+        el.linhaOutrosItem.hidden = true;
       }
 
       var hifu = estado.equip === 'hifu';
@@ -255,7 +275,17 @@
       el.preco.value = estado.preco;
     });
 
+    el.outros.addEventListener('input', function () {
+      var v = parseInt(el.outros.value, 10);
+      estado.outros = isNaN(v) || v < 0 ? 0 : Math.min(v, 100000);
+      render();
+    });
+    el.outros.addEventListener('blur', function () {
+      el.outros.value = estado.outros;
+    });
+
     el.preco.value = estado.preco;
+    el.outros.value = estado.outros;
     marcar(el.equip, 'calcEquip', estado.equip);
     marcar(el.modalidade, 'calcModalidade', estado.modalidade);
     marcar(el.cartucho, 'calcCartucho', estado.cartucho);

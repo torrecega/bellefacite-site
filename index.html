@@ -239,6 +239,17 @@
             </div>
           </div>
 
+          <div class="field">
+            <label class="field__label" for="calc-outros">
+              Outros custos por sessão
+              <span class="field__hint">(gel, descartáveis, taxa de cartão, imposto)</span>
+            </label>
+            <div class="money">
+              <span aria-hidden="true">R$</span>
+              <input id="calc-outros" type="number" inputmode="numeric" min="0" max="100000" step="10" value="0">
+            </div>
+          </div>
+
           <div class="field" id="campo-disparos">
             <span class="field__label" id="rotulo-disparos">Disparos por sessão</span>
             <div class="stepper" role="group" aria-labelledby="rotulo-disparos">
@@ -275,6 +286,7 @@
             <li><span>Receita das sessões</span> <b id="linha-receita">R$ 3.600</b></li>
             <li><span id="rotulo-locacao">Diária</span> <b id="linha-locacao">R$ 800</b></li>
             <li id="linha-insumo-item"><span id="rotulo-insumo">Disparos</span> <b id="linha-insumo">R$ 1.950</b></li>
+            <li id="linha-outros-item" hidden><span id="rotulo-outros">Outros custos</span> <b id="linha-outros">R$ 0</b></li>
             <li data-total="true"><span>Custo total</span> <b id="linha-total">R$ 2.750</b></li>
           </ul>
 
@@ -285,7 +297,8 @@
 
           <p class="calc__note">
             Simulação. Os valores de sessão são um ponto de partida, não um preço de tabela.
-            Entrega, retirada e treinamento já estão inclusos na locação.
+            Entrega, retirada e treinamento já entram na locação. O resto do seu custo
+            entra pelo campo de outros custos.
           </p>
         </aside>
       </div>

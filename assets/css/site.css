@@ -99,6 +99,11 @@ body {
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 
+/* o atributo hidden esconde via display:none do navegador, que qualquer
+   display: flex/grid autoral derruba. As linhas condicionais da calculadora
+   dependem disso funcionar. */
+[hidden] { display: none !important; }
+
 a { color: var(--brand-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--brand-600); }
 

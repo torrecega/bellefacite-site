@@ -61,9 +61,36 @@ rosa sobre fundo claro; inverter o tema descaracterizaria o material da marca.
 
 Os valores de insumo ficam em `CARTUCHO` e `PONTEIRA`, no mesmo arquivo.
 
-**Chutes iniciais da calculadora.** A constante `PADRAO` define quantas sessões
-e qual preço por sessão aparecem ao escolher cada equipamento. São só pontos de
-partida que o visitante ajusta, não tabela de preço, e a página diz isso.
+## Como a calculadora chega no número
+
+Não é ROI no sentido financeiro (lucro sobre investimento), porque não existe
+investimento: a locação morre no fim do período. O que ela calcula é o **ponto
+de equilíbrio**, ou seja, a partir de qual atendimento o aluguel já está pago.
+
+```
+custo da sessão   = insumo do equipamento + outros custos
+margem da sessão  = preço cobrado - custo da sessão
+sessão que quita  = arredonda pra cima( locação / margem da sessão )
+
+receita           = sessões × preço cobrado
+custo total       = locação + (sessões × custo da sessão)
+lucro             = receita - custo total
+```
+
+O arredondamento é pra cima porque meia paciente não existe.
+
+**Vem da tabela da BelleFacite:** os 15 preços de locação, o custo do disparo
+por cartucho (`CARTUCHO`) e a ponteira do Microneedle (`PONTEIRA`), uma por
+paciente porque é descartável por biossegurança.
+
+**São só pontos de partida:** quantas sessões cabem no período, quanto se cobra
+por sessão e quantos disparos por sessão. Ficam em `PADRAO`, no `site.js`, e a
+página deixa explícito que são valores a ajustar, não tabela de preço.
+
+**Fica com quem usa:** o campo "outros custos por sessão" recebe gel,
+descartáveis, taxa de cartão, imposto, o que for. Começa em zero de propósito,
+porque essa conta é de cada clínica. Sem ele, o resultado mede só o que sobra
+depois da locação e do insumo do equipamento, não lucro líquido.
 
 **WhatsApp.** O número está uma vez só, na constante `WHATSAPP` do
 `assets/js/site.js`. Cada botão define a mensagem pré-preenchida no atributo
