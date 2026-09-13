@@ -161,7 +161,7 @@
         var sessaoQuita = Math.ceil(locacao / margem);
         if (sessaoQuita <= estado.sessoes) {
           el.breakeven.innerHTML = 'A locação se paga na <strong>' + sessaoQuita +
-            (sessaoQuita === 1 ? 'ª sessão' : 'ª sessão') + '</strong>. As seguintes são lucro.';
+            'ª sessão</strong>. As seguintes são lucro.';
         } else {
           el.breakeven.innerHTML = 'Com esse valor, a locação se paga na <strong>' + sessaoQuita +
             'ª sessão</strong>. Aumente as sessões do período para cobrir o custo.';
