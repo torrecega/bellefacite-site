@@ -34,13 +34,25 @@ qualquer hospedagem estática.
 
 ## Estrutura da página
 
-Hero · Problema e solução · Diferenciais · Sobre · Depoimentos · Portfólio de equipamentos
-(5 tecnologias, cada uma com galeria, especificações e tabela de preços em modal) · FAQ · CTA · Rodapé
+Hero · Alugar ou comprar (comparativo) · Calculadora de retorno · Portfólio (5 tecnologias,
+cada uma com ficha lateral: galeria, especificações, indicações e tabela de preços) ·
+Tabela comparativa de preços · Como funciona · Quem somos · Depoimentos · FAQ · CTA · Rodapé
+
+### Calculadora de retorno
+
+Simulador na seção `#retorno`: o visitante escolhe a tecnologia, o número de sessões do dia e
+quanto cobra por sessão. O cálculo usa os valores reais de locação e os custos variáveis
+(disparos do HIFU, ponteiras do Microneedle) e devolve faturamento, custos, lucro do dia e
+em qual sessão a locação se paga.
+
+Para ajustar preços ou estimativas, edite o objeto `EQUIP` no script ao final de `index.html`:
+`diaria` é o valor real da locação, `preco` e `sessoes` são apenas os valores iniciais
+sugeridos ao visitante, e `varPreco`/`varQtd` cobrem os consumíveis cobrados à parte.
 
 ## Otimizações
 
 - Imagens reprocessadas com sharp: 2,25 MB → 1,03 MB
-- Carga inicial de ~261 KB
+- Carga inicial de ~341 KB; as imagens das fichas só carregam ao abrir a ficha
 - `loading="lazy"` em todas as imagens abaixo da dobra, `fetchpriority="high"` no hero
 - Animações respeitam `prefers-reduced-motion`
 - Dados estruturados Schema.org (LocalBusiness e FAQPage)
