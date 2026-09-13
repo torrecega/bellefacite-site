@@ -28,6 +28,8 @@ assets/img/           imagens já otimizadas em WebP
 imagens/              fotos originais, fonte do build de imagens
 build-images.sh       gera assets/img/ a partir de imagens/
 build-sprite.cjs      regera o sprite de ícones embutido no index.html
+make-favicon.sh       gera favicon.ico e os ícones a partir do logo circular
+favicon.ico           16 e 32 px, fallback para quem ignora as tags <link>
 ```
 
 ## Decisões que valem saber antes de mexer
@@ -77,6 +79,19 @@ O script recorta, redimensiona e converte para WebP. As fotos de produto são
 padronizadas em um quadrado de 1200 px, preenchendo as sobras com uma cópia
 desfocada da própria imagem; como o fundo de estúdio é um degradê liso, a
 emenda não aparece.
+
+**Favicon.** Sai da versão circular do logo, em `imagens/logo-circulo.png`.
+Trocando esse arquivo, rode:
+
+```bash
+bash make-favicon.sh
+```
+
+O PNG de origem é opaco, com o círculo rosa dentro de um quadrado de cantos
+brancos. O script recorta o círculo e aplica uma máscara circular, senão o
+ícone vira um quadradinho branco na aba escura do navegador. O
+`apple-touch-icon` é a exceção: sai como quadrado rosa sólido, porque o iOS
+arredonda por conta própria e ignora transparência.
 
 **Ícones.** São SVGs do [Phosphor](https://phosphoricons.com) (MIT) embutidos
 como sprite no `index.html`. Para usar um ícone novo, salve o SVG em `.icons/`,
